@@ -13,6 +13,8 @@ stop.addEventListener('click', onStop);
 
 stop.setAttribute('disabled', 'stopBtn');
 
+let interval = null;
+
 function onStart() {
   interval = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
