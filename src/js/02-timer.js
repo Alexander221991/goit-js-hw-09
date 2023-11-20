@@ -78,18 +78,18 @@ function handleClick() {
   const timerInterval = setInterval(updateTimer, 1000);
 
   function updateTimer() {
+    if (timeDiff < 0) {
+      clearInterval(timerInterval);
+      // refs.btn.setAttribute('disabled', 'disabled');
+    } else {
+      timeDiff -= 1000;
+    }
     const timeObj = convertMs(timeDiff);
 
     refs.days.textContent = addLeadingZero(timeObj.days);
     refs.hours.textContent = addLeadingZero(timeObj.hours);
     refs.minutes.textContent = addLeadingZero(timeObj.minutes);
     refs.seconds.textContent = addLeadingZero(timeObj.seconds);
-
-    if (timeDiff < 0) {
-      clearInterval(timerInterval);
-      // refs.btn.setAttribute('disabled', 'disabled');
-    }
-    timeDiff -= 1000;
 
     refs.btn.setAttribute('disabled', 'disabled');
   }
