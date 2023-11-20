@@ -93,5 +93,5 @@ function handleClick() {
 
     refs.btn.setAttribute('disabled', 'disabled');
   }
-  // updateTimer();
+  updateTimer();
 }
