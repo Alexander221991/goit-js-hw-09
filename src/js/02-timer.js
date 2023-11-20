@@ -85,14 +85,13 @@ function handleClick() {
     refs.minutes.textContent = addLeadingZero(timeObj.minutes);
     refs.seconds.textContent = addLeadingZero(timeObj.seconds);
 
-    if (timeDiff <= 0) {
+    if (timeDiff < 0) {
       clearInterval(timerInterval);
-      refs.btn.setAttribute('disabled', 'disabled');
+      // refs.btn.setAttribute('disabled', 'disabled');
     }
+    // timeDiff -= 1000;
 
-    timeDiff -= 1000;
+    refs.btn.setAttribute('disabled', 'disabled');
   }
-  refs.btn.setAttribute('disabled', 'disabled');
-
-  updateTimer();
+  // updateTimer();
 }

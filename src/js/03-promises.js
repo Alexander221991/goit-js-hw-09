@@ -22,7 +22,7 @@ function handleSubmit(event) {
   delay = Number(refs.delay.value);
 
   for (i = 0; i < amount; i += 1) {
-    timerId += 1;
+    timerId = i + 1;
 
     createPromise(timerId, delay)
       .then(({ position, delay }) => {
