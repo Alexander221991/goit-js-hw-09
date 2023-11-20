@@ -89,7 +89,7 @@ function handleClick() {
       clearInterval(timerInterval);
       // refs.btn.setAttribute('disabled', 'disabled');
     }
-    // timeDiff -= 1000;
+    timeDiff -= 1000;
 
     refs.btn.setAttribute('disabled', 'disabled');
   }
