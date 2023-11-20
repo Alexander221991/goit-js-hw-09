@@ -78,7 +78,7 @@ function handleClick() {
   const timerInterval = setInterval(updateTimer, 1000);
 
   function updateTimer() {
-    if (timeDiff < 1000) {
+    if (timeDiff <= 1000) {
       clearInterval(timerInterval);
       // refs.btn.setAttribute('disabled', 'disabled');
     } else {
@@ -93,5 +93,5 @@ function handleClick() {
 
     refs.btn.setAttribute('disabled', 'disabled');
   }
-  // updateTimer();
+  updateTimer();
 }
